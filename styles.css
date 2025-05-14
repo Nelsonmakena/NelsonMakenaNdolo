@@ -1,3 +1,7 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+  }
 *{
     margin: 0;
     padding: 0;
@@ -18,11 +22,13 @@ a {
 
 nav{
     position: fixed;
-    padding-top: 50px;
+    padding: 20px;
     width: 100%;
-    height: 10vh;
-    background-color: rgba(255, 255, 255, 0.052);
-    backdrop-filter: blur(10px)
+    height: 8vh;
+      /* background-color: rgba(255, 255, 255, 0.052);
+    backdrop-filter: blur(10px);
+    */
+    z-index: 1000;
 
 }
 nav ul {
@@ -53,11 +59,17 @@ nav ul li a.active {
     color: #007BFF;
     border-bottom: 2px solid #007BFF;
 }
-main{
-    position: absolute;
-    top: 20vh;
+nav.hide {
+    transform: translateY(-100%);
+  }
+#index{
+    position: relative;
+    top: 12vh;
     width: 100%;
+    height: 100vh;
+
 }
+
 .left{
     position: absolute;
     float: left;
@@ -162,26 +174,15 @@ image img :hover {
     transform: scaleX(1);
 
 }
-footer {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding: 20px;
-    color: white;
-    width: 100%;
-}
-.socials {
-    
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 40px;
-    font-size: 25px;
-    color: #000000;
 
-    
-}
 /* about styles */
+#about {
+    
+    position: relative;
+    width: 100%;
+    height: 100vh;
+   padding: 20px;
+}
 .about-section h2{
     text-transform: capitalize;
     color: #007BFF;
@@ -233,6 +234,15 @@ footer {
     margin-bottom: 15px;
 }
 /* skills styles */
+#skills {
+    position: relative;
+    
+    width: 100%;
+    height: 100vh;
+    
+    padding: 20px;
+    margin-top: 12vh;
+}
 h1{
     text-align: center;
     color: #000000;
@@ -303,9 +313,17 @@ h1{
     color: #555555;
   }
   /* projects styles */
+#projects {
+    position: relative;
+     width: 100%;
+    height: 100vh;
+    
+    padding: 20px;
+    top: 12vh;
+}
   .main-projects {
     
-    position: absolute;
+    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -371,6 +389,13 @@ h1{
     transition: background-color 0.3s;
 }
 /*contact styles*/
+#contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    top: 12vh;
+}
 .contact-container {
     display: flex;
     justify-content: center;
@@ -438,4 +463,22 @@ h1{
     border-radius: 5px;
 
   }
+  footer {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    width: 100%;
+}
+.socials {
+    
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    font-size: 25px;
+    color: #000000;
+
+    
+}
 
