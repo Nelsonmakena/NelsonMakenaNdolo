@@ -9,18 +9,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-
-  let lastScrollY = window.scrollY;
-  const nav = document.getElementById('navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY < lastScrollY) {
-      // Scrolling up
-      nav.classList.remove('hide');
-    } else {
-      // Scrolling down
-      nav.classList.add('hide');
-    }
-    lastScrollY = window.scrollY;
-  });
-
